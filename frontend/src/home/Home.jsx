@@ -1,14 +1,17 @@
 import React from 'react'
 import classnames from 'classnames'
 import image from '../assets/game.png'
+import './Home.css'
 
 const Home = () => {
   return (
-    <>
+    <div className='game_container'>
         <img className='game_image' src={image} />
-        <h1 className={classnames('header home')} >Where&apos;s Waldo?</h1>
-        <button className={classnames('button home')}>Play!</button>
-    </>
+        <div className='inner_container'>
+          <h1 className='header'>Where&apos;s Waldo?</h1>
+          <button className='button'>Play!</button>
+        </div>
+    </div>
   )
 }
 
