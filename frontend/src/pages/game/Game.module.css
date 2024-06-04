@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Seymour+One&display=swap');
+
+.play_image {
+    composes: game_image from '../home/Home.module.css';
+    opacity: 1;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+}
