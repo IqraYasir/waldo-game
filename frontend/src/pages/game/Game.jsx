@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import styles from './Game.module.css';
 import image from '../../assets/game.png';
@@ -31,6 +32,7 @@ const Game = () => {
   return (
     <div className={styles.container}>
         <Clock />
+        <Link to='/'><button>Exit game</button></Link>
         <img className={styles.play_image} src={image} onClick={handleClick} />
         <div>
           {targetState.length === 1 && <button className='button' onClick={offClick}>Remove target</button>}
