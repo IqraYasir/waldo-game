@@ -40,10 +40,11 @@ const Dropdown = () => {
                   imageSelected && 
                   imageSelected.src.includes(element.name) &&
                    styles.selected
-                )}
+              )}
             />)
           })}
         </div>
+        <button className='button'>Guess</button>
     </div>
   )
 }

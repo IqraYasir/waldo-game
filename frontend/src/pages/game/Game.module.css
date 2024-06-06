@@ -1,9 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Seymour+One&display=swap');
 
+.target {
+    width: 40px;
+    height: 40px;
+    border: solid 2px red;
+    position: absolute;
+}
+
+
 .play_image {
     composes: game_image from '../home/Home.module.css';
     opacity: 1;
-    position: static;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .menu {
@@ -14,4 +24,5 @@
 .selected {
     width: 200px;
 }
+
 

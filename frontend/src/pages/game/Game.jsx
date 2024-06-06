@@ -14,7 +14,14 @@ const Game = () => {
     const newObject = [
       {posX: e.pageX, posY: e.pageY, key: Math.random()}
     ];
+    console.log(newObject[0].posX, newObject[0].posY);
     setTargetState(newObject);
+  };
+
+  const offClick = (e) => {
+    if (targetState.length === 1) {
+      setTargetState([]);
+    }
   };
   
   const clickDivs = targetState.map(element => {
@@ -24,11 +31,12 @@ const Game = () => {
   return (
     <div className={styles.container}>
         <Clock />
-        <div className='image_container' onClick={handleClick}>
-          <img className={styles.play_image} src={image} />
-          {targetState.length > 0 && clickDivs}
+        <img className={styles.play_image} src={image} onClick={handleClick} />
+        <div>
+          {targetState.length === 1 && <button className='button' onClick={offClick}>Remove target</button>}
         </div>
-        <Dropdown />
+        {targetState.length === 1 && clickDivs}
+        {targetState.length === 1 && <Dropdown />}
     </div>
   )
 }
