@@ -1,10 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styles from '../pages/game/Game.module.css';
-
+import getCoordinates from '../scripts/coordinates' 
 
 const Target = props => {
-  return (<div className={styles.target} style={{ left: props.posX - 20, top: props.posY - 20}}></div>)
+  const x = props.posX - 15;
+  const y = props.posY - 15;
+  getCoordinates(x, y);
+  return (<div className={styles.target} style={{ left: x, top: y}}></div>)
 }
 
 Target.propTypes = {
