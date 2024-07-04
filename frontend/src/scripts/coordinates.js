@@ -1,5 +1,3 @@
-import Target from '../components/Target';
-
-const call = () => console.log(Target.propTypes);
+const call = (x, y) => console.log(x, y);
 
 export default call;

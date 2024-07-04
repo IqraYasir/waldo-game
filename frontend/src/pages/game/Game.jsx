@@ -7,7 +7,7 @@ import image from '../../assets/game.png';
 import Clock from '../../components/Clock.jsx';
 import Dropdown from '../../components/Dropdown.jsx';
 import Target from '../../components/Target.jsx';
-
+import call from '../../scripts/coordinates.js';
 
 const Game = () => {
   const [targetState, setTargetState] = useState([]);
@@ -15,7 +15,7 @@ const Game = () => {
     const newObject = [
       {posX: e.pageX, posY: e.pageY, key: Math.random()}
     ];
-    console.log(newObject[0].posX, newObject[0].posY);
+    call();
     setTargetState(newObject);
   };
 
